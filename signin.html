@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TradeABC | Sign In</title>
+        <link  href="{% 'favicon.ico' %}">
+        <meta name="description" content="sign in area for tradeABC">
+        <meta name="Author" content="Clever Akanimoh">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/my_project/favicon.ico">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="">
+        <style>
+            /* links and button */
+            a.get-started-link:link, a.get-started-link:visited {
+                background-color: green;
+                color: white;
+                padding: 7px 7px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            a.get-started-link:hover, a.get-started-link:active {
+                background-color: whitesmoke;
+                border: 1px solid greenyellow;
+                color: greenyellow;
+                
+            }
+
+            a:link, a:visited, a:hover, a:active{
+                text-align: center;
+                text-decoration: none;
+                color: black;
+            }
+            a:hover{
+                color:green
+            }
+
+            a.company-namehead{
+                color: green;
+            }
+
+            .submit-cls:hover {
+                background-color: greenyellow;
+                border: 1px solid greenyellow;
+                color: white;
+            }
+
+            .submit-cls:active, .submit-cls:visited{
+                background-color: green;
+                border: 1px solid green;
+                color: white;
+            }
+
+            a.div4-signin:visited, a.div4-signin:link, a.div4-signin:hover, a.div4-signin:active,a.div4-signup:visited, a.div4-signup:link, a.div4-signup:hover, a.div4-signup:active {
+                text-align: center;
+                text-decoration: underline;
+                color: green;
+            }
+
+            a.company-namehead:active{
+                color: black;
+            }
+             /* body Styling*/
+            body{
+                box-sizing: border-box;
+                text-align: center;
+                margin: none;
+                font-family: Roboto, helvetica, arial, sans-serif;
+                height: 100%; width: 100%;
+                background-image: url"{% static 'authentication/signupFormBg' %}";
+                background-origin: border-box;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: scroll;
+                overflow: scroll;
+                overflow-x: scroll;
+                resize:both;
+            }
+
+            /* menu CSS */
+
+            @keyframes companyhead {
+            0%   { left:0px; top:0px;}
+            25%  { left:50px; top:0px;}
+            100% { left:0px; top:0px;}
+            }
+
+            .menu-header-section{
+                text-align: center;
+                font-family: "Garamond";
+                width: 100%;
+            }
+
+            .company-namehead{
+                float: left;
+                text-decoration: none;
+                font-size: medium;
+                font-weight: bolder;
+                color: green;
+                font-family: "Arial";
+                padding-left: 25px;
+                width: 100px;
+                height: 20px;
+                position: relative;
+                animation-name: companyhead;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: 10;
+                animation-direction: alternate;
+            }
+
+            .menu-li-company{
+                display: block;
+                padding-left: 5px ;
+                width: 100%;
+            }
+
+            .menu-product, .menu-learn, .menu-institution, .menu-businesses, .menu-developer, .menu-company{
+                padding: 1px;
+                padding-top: 0px;
+            }
+
+            .menu-ul{
+                position: sticky;
+                position:  -webkit-sticky; top: 0;
+                width: 100%;
+                border:1px ridge whitesmoke; border-top: none;
+                padding-bottom: 7px; padding-top: 10px;
+                list-style-type: none;
+                margin: 0;
+                padding-bottom: 8px;
+                overflow: hidden;
+            }
+
+            .menu-li {
+                display: inline;
+                width: 100%;
+                font-size: 1vw;
+                clear: both;
+            }
+
+            .signup-cls, .get-started-link {
+                padding-left: 70px;
+            }
+
+            /* Responsive layout - when the screen is less than 459px wide, make the navigation links stack on top of each other instead of next to each other */
+
+            @media screen and (max-width: 600px) {
+                .menu-ul a {
+                    display: inline;
+                    border-bottom: 0px solid black;
+                    font-size: 10px;
+                    padding: 4px;
+                    width: 100%;
+                    overflow-x: auto;
+                    position: sticky;
+                    position: -webkit-sticky;
+                    top: 0;
+                    float: none;
+                }
+                div.signin-form-div{
+                    font-size: 13px;
+                    padding-left: 0;
+                }
+                .form-div4 {
+                    font-size: 10px;
+                }
+                h4{
+                    font-size: 10px;
+                    font-style: normal;
+                }
+            }
+
+            @media screen and (max-width: 300px){
+                .menu-li{
+                    display: block;
+                    border-bottom: 0px solid black;
+                    font-size: 5px;
+                    padding: 2px;
+                    width: 100%;
+                    overflow: auto;
+                    position: sticky;
+                    position: -webkit-sticky;
+                    top: 0;
+                    float: none;
+                }
+                div.signin-form-div{
+                    font-size: 6px;
+                    padding-left: 0;
+                }
+                .form-div4 {
+                    font-size: 5px;
+                }
+                h4{
+                    font-size: 5px;
+                    font-style: normal;
+                }
+            }
+
+            /* form CSS */
+
+            .signin-form-div {
+                display: flex;
+                border: none;
+                width: 100%;
+                padding: 20px;
+                text-align:left;
+                font-weight:bold;
+                font-size: 10px;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                padding-top: 80px;
+            }
+
+            .user-cls, .pass-cls{
+                height: 35px;
+                width: 100%;
+                border-radius: 0px;
+                border: 1px ridge green;
+                border-top: none;border-left: none;border-right: none;
+            }
+
+            .submit-cls{
+                background-color: green;
+                border: 1px ridge green;
+                color: white;
+                width: 100%;
+                height: 40px;
+                border-radius: 46px;
+            }
+
+            .form-div4, .remember-cls, .forgot-parag {
+                text-align: center;
+                font-size: 1vw;
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            label{
+                font-family: Garamond;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="menu-header">
+            <section class="menu-header-section">
+                <div class="menu-div" >
+                    <ul class="menu-ul">
+                        <li class="menu-li-company"><div class="company-div"><a href="" class="company-namehead">tradeABC</a></div></li>
+                        <li class="menu-li"><a href="#product" class="menu-product">Product</a></li>
+                        <li class="menu-li"><a href="#learn" class="menu-learn">Learn</a></li>
+                        <li class="menu-li"><a href="#institution" class="menu-institution">Institution</a></li>
+                        <li class="menu-li"><a href="#business" class="menu-businesses">Businesses</a></li>
+                        <li class="menu-li"><a href="#developer" class="menu-developer">Developer</a></li>
+                        <li class="menu-li"><a href="#company" class="menu-company">Company</a></li>
+                        <li class="menu-li"><a href="signup" name="" class="signup-cls">Sign Up</a></li>
+                        <li class="menu-li" accesskey="g"><a href="#getstarted" class="get-started-link">Get Started</a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+
+        <div class="signin-form-div">
+            <div class="form-div-cls">
+                <h2 class="form-h2-cls" style="font-size: 30px; width: fit-content;">Welcome To Tradeabc</h2>
+                <h4 class="form-h4-cls" style="font-style: italic; font-size: 20px; font-weight: normal; font-family:  'Times New Roman', Times, serif;">Fill the form to sign in</h4>
+                <!-- Sign in Form-->
+                <form action="signin" method="post">
+                    <p>
+                        <input type="text/email" id="username" class="user-cls" placeholder="Username or Email Here..." required><br />
+                        <label style="font-size: 15px;">Username* </label>
+                    </p><br>
+
+                    <p>
+                        <input type="password" id="pass1" class="pass-cls" placeholder="Password Here..." required><br/>
+                        <label style="font-size: 15px; ;">Password* </label>
+                    </p>
+
+                    <p class="remember-cls">
+                        <input type="checkbox" class="checkk">&nbsp;Remember Me!
+                    </p>
+                    <p class="forgot-parag">
+                        forgot password?<a href="#" class="forgot-cls" style="font-style: italics;"> click here</a>
+                    </p><br>
+
+                    <p>
+                        <input type="submit" value="Sign In" class="submit-cls">
+                    </p><br>
+
+                    <p class="form-div4" >
+                        <a href="signin" class="div4-signin">Sign in</a> to your TradeABC Account or<br>
+                        <a href="signup" class="div4-signup">Sign up</a> as a Business
+                    </p>
+                </form>
+            </div>
+        </div>
+        
+        <script></script>
+    </body>
+</html>

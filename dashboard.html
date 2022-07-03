@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="mainpage/dashboard for TradeABC" />
+    <meta name="author" content="Clever Akanimoh" />
+    <script src="https://kit.fontawesome.com/013e95e6af.js" crossorigin="anonymous"></script>
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="/my_project/favicon.ico" />
+    <link rel="stylesheet" href="" />
+    <style>
+        /* links CSS*/
+        a:link,
+        a:visited,
+        a:active {
+            color: green;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: lightgreen;
+            text-decoration: underline;
+        }
+
+        a.side-c {
+            color: white;
+            font-size: larger;
+            text-decoration: none;
+        }
+
+        a.not-icon,
+        a.avatar-menu {
+            border: 1px solid grey;
+            border-radius: 55px;
+            padding: 10px;
+        }
+
+        a.side-a:hover,
+        a.side-a:active {
+            border: none;
+            color: black;
+            background-color: rgb(1, 252, 14);
+            border-radius: 25px;
+            text-align: left;
+            padding: 8px 42px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .buy-menu:link,
+        .buy-menu:visited,
+        .buy-menu:active,
+        a.need-help1:link,
+        a.need-help1:visited,
+        a.need-help1:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 10px 20px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .send-menu:link,
+        .send-menu:visited,
+        .send-menu:active,
+        .explore-link:link,
+        .explore-link:visited,
+        .explore-link:active {
+            border: 1px solid grey;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            text-align: left;
+            padding: 10px 20px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .buy-menu:hover,
+        a.need-help1:hover {
+            background-color: lightgreen;
+        }
+
+        .send-menu:hover,
+        .explore-link:hover {
+            color: black;
+            background-color: white;
+        }
+
+        /* body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            background-color: rgb(15, 14, 14);
+            margin: 0 0 0 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* float */
+        .sidenav {
+            display: block;
+            float: left;
+            width: 10%;
+            text-align: left;
+        }
+
+        .main-div {
+            float: left;
+            width: 83%;
+            padding-left: 50px;
+        }
+
+        .top-li {
+            float: right;
+            padding: 10px;
+        }
+
+        /* side navigation */
+        .side-ul {
+            display: block;
+            position: relative;
+            height: 1050px;
+            width: 105%;
+            border-right: 1px solid grey;
+        }
+
+        .side-li-c,
+        .side-li {
+            list-style-type: none;
+            padding: 6px;
+            margin-top: 1px;
+        }
+
+        .side-li-c {
+            padding-bottom: 35px;
+        }
+
+        /* top navigation */
+        .top-ul {
+            display: block;
+            overflow: hidden;
+            border: 1px ridge grey;
+            width: 100%;
+            padding-bottom: 15px;
+            padding-top: 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .top-li-a,
+        .top-li-c,
+        .top-li {
+            display: inline-block;
+            list-style-type: none;
+            padding-left: 6px;
+        }
+
+        .top-li-c {
+            display: none;
+        }
+
+        /* inside main-nav-flex */
+        .port-div,
+        .asset-div,
+        .wash-div,
+        .recurring-div,
+        .crypto-div {
+            background-color: aquamarne;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid grey;
+            border-radius: 8px;
+        }
+
+        .gift-div {
+            margin-top: 0px;
+        }
+
+        .asset-div-cls {
+            text-align: center;
+            border-top: 1px solid grey;
+            padding: 40px 30px;
+        }
+
+        div.get-flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        div.get-flex-container>.avatar-div,
+        .world-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .avatar-div {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .world-div {
+            border-right: 1px solid grey;
+            padding-right: 70px;
+        }
+
+        div.nav-crypto-container {
+            display: flex;
+        }
+
+        div.nav-crypto-container>.nav-flex {
+            padding-left: 90px;
+        }
+
+        .gift-flex {
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+
+        .started-div {
+            border: 1px solid grey;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .icon-div {
+            border: 1px solid grey;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            padding: 10px 25px;
+        }
+
+        .bitcoin-link:link,
+        .bitcoin-link:visited,
+        .bitcoin-link:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 20px 80px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .bitcoin-link:hover {
+            background-color: lightgreen;
+        }
+
+
+        .bitcoin-div {
+            padding: 30px 15px;
+        }
+
+        .sub-div {
+            border: none;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: rgb(32, 30, 30);
+        }
+
+        /* table styling */
+        table {
+            text-align: left;
+            padding: 5px;
+        }
+
+        th {
+            border-bottom: 1px solid grey;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .watch-buy:link,
+        .watch-buy:visited,
+        .watch-buy:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 3px 10px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .watch-buy:hover {
+            background-color: lightgreen;
+        }
+
+        .recurring-buys {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            border: 1px solid grey;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .send-gift:link,
+        .send-gift:visited,
+        .send-gift:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 10px 8px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .send-gift:hover {
+            background-color: lightgreen;
+        }
+
+        .dismiss:link,
+        .dismiss:visited,
+        .dismiss:active {
+            color: white;
+            padding-left: 10px;
+        }
+
+        /* footer section */
+        .footer-ul {
+            display: block;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            border: 1px ridge grey;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .footer-li,
+        .footer-li-c,
+        .footer-select,
+        .need-help {
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .need-help,
+        .footer-select {
+            float: right;
+        }
+
+        select:focus {
+            outline: none;
+            inline-size: 130px;
+        }
+
+        .f600-div,
+        .recurring-div2 {
+            display: none;
+            list-style-type: none;
+        }
+
+        @media screen and (max-width:1200px) {
+            div.nav-crypto-container>.nav-flex {
+                padding: 10px;
+                padding-top: 0px;
+                margin-top: 0;
+            }
+
+            .side-ul {
+                height: 1370px;
+            }
+
+            a.side-a:hover,
+            a.side-a:active {
+                border: none;
+                color: black;
+                background-color: rgb(1, 252, 14);
+                border-radius: 25px;
+                text-align: left;
+                padding: 4px 18px;
+                font-size: small;
+                text-decoration: none;
+            }
+
+            .gift-flex {
+                padding-right: 0;
+                padding-left: 10px;
+            }
+
+            .world-div {
+                padding-right: 110px;
+            }
+
+            .bitcoin-link:link,
+            .bitcoin-link:visited,
+            .bitcoin-link:active {
+                border: none;
+                color: black;
+                background-color: green;
+                border-radius: 5px;
+                text-align: left;
+                padding: 15px 50px;
+                font-size: small;
+                text-decoration: none;
+            }
+
+            .bitcoin-link:hover {
+                background-color: lightgreen;
+            }
+
+
+            .bitcoin-div {
+                padding: 30px 15px;
+            }
+
+            .sub-div {
+                border: none;
+                border-radius: 4px;
+                padding: 4px;
+                background-color: rgb(32, 30, 30);
+            }
+
+            .sidenav {
+                display: block;
+                float: left;
+                width: 10%;
+                text-align: left;
+            }
+
+            .main-div {
+                float: left;
+                width: 83%;
+                padding-left: 50px;
+            }
+
+            div.nav-crypto-container>.nav-flex {
+                padding: 15px;
+            }
+
+            div.nav-crypto-container {
+                flex-direction: column-reverse;
+            }
+
+        }
+
+        @media screen and (max-width: 800px) {
+            .sidenav {
+                width: 5%;
+            }
+
+            .side-ul {
+                height: 1420px;
+            }
+
+            .get-flex-container {
+                flex-direction: row;
+                justify-content: left;
+            }
+
+            .get-flex-container>.world-div,
+            .avatar-div {
+                padding: 0;
+            }
+
+            .get-flex-container>.world-div {
+                border: none;
+                padding-bottom: 5px;
+            }
+
+            .port-div {
+                width: 100%;
+            }
+
+            .asset-div {
+                width: 100%;
+            }
+
+            .wash-div {
+                width: 100%;
+            }
+
+            .footer-select {
+                float: none;
+            }
+
+            .recurring-div {
+                display: none;
+            }
+
+            .gift-flex {
+                width: 100%;
+            }
+
+            .need-help {
+                float: left;
+            }
+
+            .footer-li {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: small;
+            }
+
+            .top-li-a,
+            .avatar-menu,
+            .buy-menu,
+            .send-menu,
+            .side-li,
+            .sidenav {
+                display: none;
+            }
+
+            .top-li-c {
+                display: inline-block;
+                list-style-type: none;
+                padding-left: 6px;
+                font-weight: bolder;
+                font-size: larger;
+            }
+
+            .main-div {
+                float: none;
+                width: 92%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .bitcoin-link:link,
+            .bitcoin-link:visited,
+            .bitcoin-link:active {
+                padding: 13px 30px;
+            }
+
+            .bitcoin-div {
+                padding: 25px 10px;
+            }
+
+            .sub-div {
+                border: none;
+                border-radius: 4px;
+                padding: 4px;
+                background-color: rgb(32, 30, 30);
+            }
+
+            .port-div,
+            .asset-div,
+            .wash-div,
+            .recurring-div,
+            .crypto-div {
+                padding: 12px;
+                margin-top: 5px;
+                border: 1px solid grey;
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            .crypto-div {
+                margin-top: 0px;
+            }
+
+            .recurring-div2 {
+                display: block;
+                padding: 12px;
+                margin-top: 5px;
+                border: 1px solid grey;
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            th {
+                display: none;
+            }
+
+            .footer-li,
+            .need-help,
+            .footer-select {
+                text-align: center;
+            }
+
+            .need-help,
+            .footer-select,
+            .footer-li-c {
+                display: none;
+            }
+
+            .f600-div {
+                display: flex;
+                flex-direction: column-reverse;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .f600-div>.footer-li-c1,
+            .f600-help {
+                padding: 10px;
+            }
+
+            .footer-li-c1 {
+                border-top: 1px solid grey;
+                margin-top: 15px;
+                width: 90%;
+            }
+
+            .asset-div-cls {
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="sidenav">
+            <ul class="side-ul">
+                <li class="side-li-c">
+                    <a href="" class="side-c"><b>Coinbase</b></a>
+                </li>
+                <li class="side-li"><a href="" class="side-a">Assets</a></li>
+                <li class="side-li"><a href="" class="side-a">Trade</a></li>
+                <li class="side-li"><a href="" class="side-a">Pay</a></li>
+                <li class="side-li"><a href="" class="side-a">For you</a></li>
+                <li class="side-li"><a href="" class="side-a">More</a></li>
+            </ul>
+        </div>
+
+        <div class="main-div">
+            <div class="topnav">
+                <ul class="top-ul">
+                    <li class="top-li-c"><a href=""
+                            style="color: white; font-size: larger;text-decoration: none;">Coinbase</a></li>
+                    <li class="top-li-a"><a href=""
+                            style="color: white; font-size: larger;text-decoration: none;">Assets</a></li>
+                    <li class="top-li"><a href="" class="avatar-menu" title="profile"><i class="fa-solid fa-user-tie"
+                                title="profile"></i></a></li>
+                    <li class="top-li"><a href="" class="not-icon" title="notifications"><i class="fa-solid fa-bell"
+                                title="notifications"></i></a></li>
+                    <li class="top-li"><a href="" class="menu-icon" title="menu"><i class="fa-solid fa-bars"
+                                title="menu"></i></a></li>
+                    <li class="top-li"><a href="" class="send-menu">Send/Recieve</a></li>
+                    <li class="top-li"><a href="" class="buy-menu">Buy/Sell</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-crypto-container">
+                <div class="nav-flex">
+                    <div class="port-div">
+                        <div>
+                            <p><b>PortFolio Balance</b><br />NGN0.00</p>
+                            <div class="started-div">
+                                <p>
+                                    <b>Get Started With Bitcoin</b><br />
+                                    <a href="">learn more</a>
+                                </p>
+
+                                <div class="get-flex-container">
+                                    <div class="world-div">
+                                        <p>
+                                            <b>The world's #1 cryptocurrency<br><br>
+                                                Trade 24/7 hours a day<br><br>
+                                                Get Started with a little as $5</b>
+                                        </p>
+                                    </div>
+
+                                    <div class="avatar-div">
+                                        <div class="sub-div">
+                                            <div class="icon-div">
+                                                <i class="fa-solid fa-user-tie" title="profile"></i><br /><a
+                                                    href="">12,345+</a> customers bought<br />Bitcoin Today
+                                            </div>
+                                            <div class="bitcoin-div">
+                                                <a href="" class="bitcoin-link">Buy Bitcoin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="asset-div">
+                        <p>Your Assets</p>
+                        <div class="asset-div-cls">
+                            <img src="" alt="svg-icon"><br /><b>Get Started With crypto</b><br /><em>your crypto assets
+                                will appear
+                                here</em><br /><br><a href="" class="explore-link">Explore Asset</a>
+                        </div>
+                    </div>
+                    <div class="wash-div">
+                        <p style="padding-left: 12px;">Washlist</p>
+                        <div style="border-top: 1px solid grey; margin: 0;">
+                            <table>
+                                <tr>
+                                    <th style="padding-right: 20px;" class="name">Name</th>
+                                    <th>Price</th>
+                                    <th>Change</th>
+                                    <th>Market Cap</th>
+                                    <th style="text-align: right;">Watch</th>
+                                </tr>
+                                <tr>
+                                    <td><img src="" alt="b-logo" />Bitcoin<br>{{btc}}</td>
+                                    <td>{{price in numbers}}</td>
+                                    <td>{{Change-in-number -|+}}</td>
+                                    <td>{{Market-cap}}</td>
+                                    <td
+                                        style="text-align: left; padding-right: 20px; display: flex;justify-content: space-between;">
+                                        <a href="" class="watch-buy">Buy</a><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-bars"></i>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recurring-div2">
+                        <div style="padding-bottom: 10px;">Recurring Buys <a href="" style="float: right;">add new</a>
+                        </div>
+                        <div class="recurring-buys1">
+                            <img src="" alt="svg-icon.."> Learn about recurring buys<br><em
+                                style="font-weight: normal;color:grey">invest daily, weekly or month...</em>
+                            <a href=""><i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-flex">
+                    <div class="gift-div">
+                        <div class="crypto-div">
+                            <p>
+                                Crypto gifts<a href=""><i class="fa-solid fa-arrow-right"
+                                        style="float: right; padding-left: 5px;"></i><i class="fa-solid fa-arrow-left"
+                                        style="float: right;"></i></a><br /><br />
+                                <em style="font-weight: normal;color:grey">Give crypto to your
+                                    friends<br />and family</em>
+                            </p>
+                            <p>
+                                <a href="" class="send-gift">Send gift</a> <a href="" class="dismiss">Dismiss</a>
+                                <img src="" alt="svg-icon" style="float: right;">
+                            </p>
+                        </div>
+                        <div class="recurring-div">
+                            <div style="padding-bottom: 10px;">Recurring Buys <a href="" style="float: right;">add
+                                    new</a>
+                            </div>
+                            <div class="recurring-buys">
+                                <div>
+                                    <img src="" alt="svg-icon..">
+                                </div>
+                                <div>
+                                    Learn about recurring buys<br><em style="font-weight: normal;color:grey">invest
+                                        daily, weekly or month...</em>
+                                </div>
+                                <div>
+                                    <a href=""><i class="fa-solid fa-angles-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <footer class="footer-div">
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a href="">Home</a></li>
+                        <li class="footer-li"><a href="">Career</a></li>
+                        <li class="footer-li"><a href="">legal & privacy</a></li>
+                        <li class="footer-li-c"><em>© 2022 coinbase</em></li>
+                        <li class="need-help"><a href="#" class="need-help1">Need help?</a></li>
+                        <li class="footer-select">
+                            <select class="footer-select">
+                                <option>---select lang---</option>
+                                <option>English</option>
+                                <option>French</option>
+                                <option>Portugese</option>
+                                <option>Spainish</option>
+                                <option>Swahili</option>
+                                <option>Yoruba</option>
+                                <option>Chinese</option>
+                            </select>
+                        </li>
+                        <div class="f600-div">
+                            <div class="footer-li-c1">
+                                <em>© 2022 coinbase</em>
+                            </div>
+
+                            <div class="f600-help">
+                                <a href="#" class="need-help1">Need help?</a>
+                                <select class="f600-select">
+                                    <option>---select lang---</option>
+                                    <option>English</option>
+                                    <option>French</option>
+                                    <option>Portugese</option>
+                                    <option>Spanish</option>
+                                    <option>Swahili</option>
+                                    <option>Yoruba</option>
+                                    <option>Chinese</option>
+                                </select>
+                            </div>
+                        </div>
+            </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="description" content="sign up page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Clever Akanimoh">
+    <title>TradeABC | Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="/my_project/favicon.ico">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <!-- CSS Properties Here -->
+    <style>
+        /* links and button */
+        a.get-started-link:link,
+        a.get-started-link:visited {
+            background-color: green;
+            color: white;
+            padding: 7px 7px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a.get-started-link:hover,
+        a.get-started-link:active {
+            background-color: whitesmoke;
+            border: 1px solid greenyellow;
+            color: greenyellow;
+
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: green
+        }
+
+        a.company-namehead {
+            color: green;
+        }
+
+        .submit-cls:hover {
+            background-color: greenyellow;
+            border: 1px solid greenyellow;
+            color: white;
+        }
+
+        .submit-cls:active,
+        .submit-cls:visited {
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+        }
+
+        a.div4-signin:visited,
+        a.div4-signin:link,
+        a.div4-signin:hover,
+        a.div4-signin:active,
+        a.div4-signup:visited,
+        a.div4-signup:link,
+        a.div4-signup:hover,
+        a.div4-signup:active,
+        a.user-agreement-cls:active,
+        a.user-agreement-cls:visited,
+        a.user-agreement-cls:link,
+        a.user-agreement-cls:hover,
+        a.privacy-policy-cls:active,
+        a.privacy-policy-cls:visited,
+        a.privacy-policy-cls:link,
+        a.privacy-policy-cls:hover {
+            text-align: center;
+            text-decoration: underline;
+            color: green;
+        }
+
+        a.company-namehead:active {
+            color: black;
+        }
+
+        /* body Styling*/
+        body {
+            box-sizing: border-box;
+            text-align: center;
+            margin: none;
+            font-family: Roboto, helvetica, arial, sans-serif;
+            height: 100%;
+            width: 100%;
+            background-image: url(/my_project/resources/signupFormBg);
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            overflow: scroll;
+            overflow-x: scroll;
+            resize: both;
+        }
+
+        /* menu CSS */
+
+        @keyframes companyhead {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 50px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .menu-header-section {
+            text-align: center;
+            font-family: "Garamond";
+            width: 100%;
+        }
+
+        .company-namehead {
+            float: left;
+            text-decoration: none;
+            font-size: medium;
+            font-weight: bolder;
+            color: green;
+            font-family: "Arial";
+            padding-left: 25px;
+            width: 100px;
+            height: 20px;
+            position: relative;
+            animation-name: companyhead;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: 10;
+            animation-direction: alternate;
+        }
+
+        .menu-li-company {
+            display: block;
+            padding-left: 5px;
+            width: 100%;
+        }
+
+        .menu-product,
+        .menu-learn,
+        .menu-institution,
+        .menu-businesses,
+        .menu-developer,
+        .menu-company {
+            padding: 1px;
+            padding-top: 0px;
+        }
+
+        .menu-ul {
+            position: sticky;
+            position: -webkit-sticky;
+            width: 100%;
+            border: 1px ridge whitesmoke;
+            border-top: none;
+            padding-bottom: 7px;
+            padding-top: 10px;
+            list-style-type: none;
+            margin: 0;
+            padding-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .menu-li {
+            display: inline;
+            width: 100%;
+            font-size: 1vw;
+            clear: both;
+        }
+
+        .signin-cls,
+        .get-started-link {
+            padding-left: 70px;
+        }
+
+        /* Responsive layout - when the screen is less than 459px wide, make the navigation links stack on top of each other instead of next to each other */
+
+        @media screen and (max-width: 300px) {
+            .menu-li {
+                display: block;
+                border-bottom: 0px solid black;
+                font-size: 5px;
+                padding: 2px;
+                width: 100%;
+                overflow: auto;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0;
+                float: none;
+            }
+
+            div.signin-form-div {
+                font-size: 6px;
+                padding-left: 0;
+            }
+
+            .form-div4 {
+                font-size: 5px;
+            }
+
+            h4 {
+                font-size: 5px;
+                font-style: normal;
+            }
+        }
+
+        /* Form text CSS */
+
+        .form-text-flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+        }
+
+        .form-text-flex-container>.form-div-cls,
+        .text-div-cls {
+            margin: 20px;
+            font-size: 1vw;
+            width: 400px;
+            text-align: center;
+        }
+
+        .text-div-cls {
+            text-align: left;
+            font-size: 10px;
+            font-family: "Roboto", sans-serif;
+            line-height: 1.1;
+        }
+
+        .form-div-cls {
+            width: 85%;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        /*@media screen and (max-width:600px) {
+                .form-text-flex-container{
+                    flex-direction: column-reverse;
+                }
+            }*/
+
+        @media screen and (max-width:600px) {
+            .text-div-cls {
+                display: none;
+            }
+        }
+
+        .form-h4-class {
+            font-weight: normal;
+
+        }
+
+        /*.email-cls, .pass-cls{
+                background-color: ;
+            }*/
+
+        .first-cls,
+        .last-cls,
+        .email-cls,
+        .pass-cls {
+            height: 30px;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px groove green;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .submit-cls {
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+        }
+
+        .checkk-label-cls {
+            font-size: 1vw;
+        }
+
+        .checkk {
+            float: left;
+        }
+
+        .form-div4 {
+            text-align: center;
+            font-size: 1vw;
+        }
+
+        .email-label-cls,
+        .password-label-cls,
+        .checkk-label-cls,
+        .form-foot-cls,
+        .first,
+        .last {
+            font-family: Garamond;
+        }
+
+        /* Article 2*/
+
+        .imgphone-div-cls {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+        }
+
+        .imgphone-div-cls>.imgphone-cls,
+        .article2-cls {
+            margin: 15px;
+            font-size: 1vw;
+            width: 400px;
+            text-align: center;
+        }
+
+        .imgphone-cls {
+            width: 50%;
+        }
+
+        .article2-cls {
+            text-align: left;
+            font-size: 1vw;
+            font-family: "Roboto", sans-serif;
+            padding-right: 20px;
+        }
+
+        @media screen and (max-width:600px) {
+            .imgphone-cls {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .article2-cls {
+                font-size: 15px;
+                font-style: italic;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+
+            .form-div-cls,
+            .form-div4,
+            .checkk-label-cls {
+                font-size: 15px;
+            }
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="menu-header">
+        <section class="menu-header-section">
+            <div class="menu-div" style="padding:0 0">
+                <ul class="menu-ul">
+                    <li class="menu-li-company">
+                        <div class="company-div"><a href="" class="company-namehead">tradeABC</a></div>
+                    </li>
+                    <li class="menu-li"><a href="#product" class="menu-product">Product</a></li>
+                    <li class="menu-li"><a href="#learn" class="menu-learn">Learn</a></li>
+                    <li class="menu-li"><a href="#institution" class="menu-institution">Institution</a></li>
+                    <li class="menu-li"><a href="#business" class="menu-businesses">Businesses</a></li>
+                    <li class="menu-li"><a href="#developer" class="menu-developer">Developer</a></li>
+                    <li class="menu-li"><a href="#company" class="menu-company">Company</a></li>
+                    <li class="menu-li"><a href="#login" name="sign in-signup page" class="signin-cls">Sign in</a></li>
+                    <li class="menu-li" accesskey="l"><a href="#getstarted" class="get-started-link">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    <main class="main-cls">
+        <div class="form-text-flex-container">
+            <div class="text-div-cls">
+                <p class="earn-crypto-cls" style="font-size: large; font-weight:bolder;">
+                    Earn crypto on your
+                    <br />first trade on
+                    <br />TradeABC*
+                </p>
+                <p style="font-style: italic; font-size:small;">tradeABC is the easiest place to buy and sell
+                    <br>cryptocurrency. Signup and get started today.
+                </p>
+            </div>
+
+            <!-- Creating a from -->
+            <div class="form-div-cls">
+                <div class="form-div-cls">
+                    <form action="" method="post" class="form-cls">
+                        <div class="opening-form-div">
+                            <p style="font-weight: bolder;
+                                    font-size:medium">Create your free TradeABC Account</p>
+                            <p
+                                style="font-style:italics;font-weight:normal; font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                Required fields have an asterisk *
+                            </p>
+
+                        </div>
+                        <!-- Label and input field -->
+                        <section class="div2">
+                            <div class="last-first_cls">
+                                <p>
+                                    <input name="first_name" type="text" id="fname" title="Enter Your First Name"
+                                        class="first-cls" autocomplete="on" autocapitalize="on" required />
+                                    <br>
+                                    <label class="first">First name* </label>
+                                </p>
+
+                                <p>
+                                    <input name="last_name" type="text" id="lname" title="Enter Your Last Name"
+                                        class="last-cls" autocomplete="on" autocapitalize="on" required>
+                                    <br>
+                                    <label class="last">Last name* </label>
+                                </p>
+                            </div>
+
+                            <div class="email-div">
+                                <p>
+
+                                    <input type="email" name="email" type="email" id="email"
+                                        title="Enter a valid Email Address" class="email-cls" autocomplete="on"
+                                        required />
+                                    <br>
+                                    <label class="email-label-cls">Email*</label>
+                                </p>
+                            </div>
+
+                            <div class="password-div">
+                                <p>
+                                    <input name="Password" type="password" id="pass1"
+                                        title="Enter your preferred Password, your password should be something you can remember"
+                                        class="pass-cls" required />
+                                    <br>
+                                    <label class="password-label-cls">Password*</label>
+                                </p>
+                            </div>
+                            <br>
+                            <div>
+                                <p>
+                                <p>
+                                <p>
+                                <p>
+                                    <input type="checkbox" class="checkk" required> <label
+                                        class="checkk-label-cls">&nbsp;I certify that I am 18 years of age or older, and
+                                        I agree with the <a href="" class="user-agreement-cls">User Agreement</a> And <a
+                                            href="" class="privacy-policy-cls"> Privacy Policy </a>
+                                    </label>
+                                </p>
+                            </div><br>
+
+                            <!-- Creating a button -->
+                            <div class="button-div">
+                                <p>
+                                    <input type="submit"
+                                        title="Click 'Alt' + 's' on windows to Create your free Account"
+                                        class="submit-cls" value="Create Account" accesskey="s">
+                                </p>
+                            </div>
+                            <div class="form-div4">
+                                <p class="form-foot-cls">
+                                    <a href="" class="div4-signin">Sign in</a> to your TradeABC Account or
+                                    <br>
+                                    <a href="" class="div4-signup">Sign up</a> as a Business
+                                </p>
+                            </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        </section>
+        </div>
+
+        <div class="imgphone-div-cls">
+            <img src="/my_project/resources/mobilephone.png" class="imgphone-cls">
+
+            <article class="article2-cls">
+                <div class="article2-div-cls">
+                    <h2 style="font-weight:bold; font-size: xx-large;">New To crypto ?<br>No problem.</h2>
+                    <p>We've taken the confusion out of crypto for<br>millions of Customers. But, sell and
+                        manage<br>your holdings from anywhere.<br></p>
+
+                    <p class="article2-p-cls">
+                        <strong>Create an Account</strong><br><em>Download the app or sign up online</em>
+                    </p>
+
+                    <p class="article2-p-cls">
+                        <strong>Secure your Account</strong><br><em>To keep your Bitcoin safe and to prevent identity
+                            theft<br>or fraud, you'll need a photo ID to make sure it's really<br>you.</em>
+                    </p>
+
+                    <p class="article2-p-cls">
+                        <strong>Tap into crypto</strong><br><em>get started with as little as $25, pay with debit card
+                            or<br>bank account</em>
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <picture class="footer">
+            <source srcset="/my_project/resources/rewardsFigure.jpg" media="(max-width: 600px)">
+            <source srcset="/my_project/resources/tradeabc.jpg" media="(max-width: 1500px)">
+            <img src="/my_project/resources/tradeabc.jpg" alt="ImageTest" style="width:100%;">
+        </picture>
+    </main>
+    <footer class="footer">
+        <section class="footer-section">
+
+        </section>
+
+    </footer>
+
+
+    <script>
+        function myFunction() {
+            document.getElementsByClassName("menu-product").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

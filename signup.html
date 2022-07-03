@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT" />
+    <meta name="description" content="sign up page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Clever Akanimoh" />
+    <title>Tradeabc | Sign Up</title>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <style>
+      a:link,
+      a:visited,
+      a:active {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        color: green;
+      }
+
+      a.company-namehead {
+        color: green;
+      }
+
+      .submit-cls:hover {
+        background-color: greenyellow;
+        border: 1px solid greenyellow;
+        color: white;
+      }
+
+      .submit-cls:active,
+      .submit-cls:visited {
+        background-color: green;
+        border: 1px solid green;
+        color: white;
+      }
+
+      a.div4-signin:link,
+      a.div4-signin:visited,
+      a.div4-signin:active,
+      a.div4-signup:link,
+      a.div4-signup:visited,
+      a.div4-signup:active,
+      a.user-agreement-cls:link,
+      a.user-agreement-cls:visited,
+      a.user-agreement-cls:active,
+      a.privacy-policy-cls:link,
+      a.privacy-policy-cls:visited,
+      a.privacy-policy-cls:active {
+        text-align: center;
+        text-decoration: underline;
+        color: green;
+      }
+
+      a.div4-signup:hover,
+      a.div4-signin:hover,
+      a.user-agreement-cls:hover,
+      a.privacy-policy-cls:hover {
+        color: blue;
+      }
+
+      a.company-namehead:active {
+        color: black;
+      }
+
+      body {
+        text-align: center;
+        margin: none;
+        font-family: Roboto, helvetica, arial, sans-serif;
+        height: 100%;
+        width: 100%;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        overflow: scroll;
+        overflow-x: scroll;
+        resize: both;
+      }
+
+      .menu-ul {
+        position: sticky;
+        position: -webkit-sticky;
+        width: 100%;
+        border: 1px ridge whitesmoke;
+        border-top: none; border-left: none; 
+        padding-bottom: 7px;
+        padding-top: 10px;
+        list-style-type: none;
+        margin: 0;
+        padding-bottom: 8px;
+        overflow: auto;
+      }
+
+      .menu-li {
+        display: inline;
+      }
+
+      .container {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 50px;
+      }
+
+      .first {
+        font-family: Garamond;
+      }
+
+      .user-cls,
+      .first-cls,
+      .last-cls,
+      .email-cls,
+      .pass-cls,
+      .pass2-cls {
+        height: 30px;
+        width: 100%;
+        border: 1px groove green;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      .submit-cls {
+        background-color: green;
+        border: 1px solid green;
+        color: white;
+        width: 100%;
+        height: 40px;
+        border-radius: 46px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul class="menu-ul">
+        <li class="menu-li">
+          <a href="" class="company-namehead">tradeABC</a>
+        </li>
+        <li class="menu-li"><a href="" class="signin-cls">Sign In</a></li>
+      </ul>
+    </header>
+    <!-- Creating a from -->
+    <div class="container">
+      <form
+        action="#signup"
+        method="
+    post"
+      >
+        <p style="font-weight: bolder; font-size: medium">
+          Create your free TradeABC Account
+        </p>
+        <p
+          style="
+            font-style: italics;
+            font-weight: normal;
+            font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',
+              Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+              sans-serif;
+          "
+        >
+          Required fields have an asterisk *
+        </p>
+        <!-- Label and input field -->
+        <div>
+          <p>
+            <input
+              name="username"
+              type="text"
+              id="username"
+              title="Enter Your UserName"
+              class="user-cls"
+              autocomplete="off"
+              autocapitalize="off"
+              required
+            />
+            <br />
+            <label class="first">Username* </label>
+          </p>
+        </div>
+
+        <div class="last-first_cls">
+          <p>
+            <input
+              name="fname"
+              type="text"
+              id="fname"
+              title="Enter Your First Name"
+              class="first-cls"
+              autocomplete="on"
+              autocapitalize="on"
+              required
+            />
+            <br />
+            <label class="first">First name* </label>
+          </p>
+
+          <p>
+            <input
+              name="lname"
+              type="text"
+              id="lname"
+              title="Enter Your Last Name"
+              class="last-cls"
+              autocomplete="on"
+              autocapitalize="on"
+              required
+            />
+            <br />
+            <label class="first">Last name* </label>
+          </p>
+        </div>
+
+        <div class="email-div">
+          <p>
+            <input
+              type="email"
+              name="email"
+              type="email"
+              id="email"
+              title="Enter a valid Email Address"
+              class="email-cls"
+              autocomplete="on"
+              required
+            />
+            <br />
+            <label class="first">Email*</label>
+          </p>
+        </div>
+
+        <div class="password-div">
+          <p>
+            <input
+              name="pass1"
+              type="password"
+              id="pass1"
+              title="Enter Password"
+              class="pass-cls"
+              required
+            />
+            <br />
+            <label class="first">Password*</label>
+          </p>
+
+          <input
+            type="password"
+            id="pass2"
+            name="pass2"
+            title="Confirm your password"
+            class="pass-cls"
+            required
+          />
+          <br />
+          <label class="first">Confirm Password </label>
+          <br />
+        </div>
+        <br />
+        <div>
+          <p>
+            <input
+              type="checkbox"
+              class="checkk"
+              required
+              style="float: left"
+            />
+            <em
+              >&nbsp;I certify that I am 18 years of age or older,<br />and I
+              agree with the
+              <a href="" class="user-agreement-cls">User Agreement</a>
+              And<br /><a href="" class="privacy-policy-cls">
+                Privacy Policy
+              </a></em
+            >
+          </p>
+        </div>
+        <br />
+
+        <!-- Creating a button -->
+        <div class="button-div">
+          <p>
+            <input
+              type="submit"
+              title="Click 'Alt'+'s' on windows to Create your free Account"
+              class="submit-cls"
+              value="Create Account"
+              accesskey="s"
+              
+            />
+          </p>
+        </div>
+        <div class="form-div4" style="text-align:center">
+          <p class="form-foot-cls">
+            <a href="#signin" class="div4-signin">Sign in</a> to your TradeABC
+            Account or
+            <br />
+            <a href="#signup" class="div4-signup">Sign up</a> as a Business
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
